@@ -52,8 +52,14 @@ Both populations have a minor sample who contracted the disease, and according t
 
   
 ## Numerical results
-
-
+```{r}
+table1 <- xtabs(~result + Sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+  
+The table above displays that 56% of the alive population are females while 36% of the dead population are female. The second table further illustrates that 3% of the total sample population of males are dead from COVID while only 1.4% of the females are dead from COVID in Korea.
+  
 ## Inferential results 
 
 
