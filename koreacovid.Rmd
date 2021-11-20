@@ -39,10 +39,14 @@ with(kRdata, table(Sex, result))
 ## We create two bar charts - one based on frequency and the other on percent, use ggplot commands to do this
 
 `
+```{r}
+barchartGC(~result + Sex,data=kRdata)
+barchartGC(~result + Sex,data=kRdata, type="percent")
 
+```
   
-
-
+Both populations have a minor sample who contracted the disease, and according to the bar charts above, the males generally die more than the females. However, there are more females in the data than males. Despite this data size difference, the data suggests an increased probability of dying from COVID in Korea if you are male.
+  
 
 
 
