@@ -61,9 +61,13 @@ colPerc(table1)
 The table above displays that 56% of the alive population are females while 36% of the dead population are female. The second table further illustrates that 3% of the total sample population of males are dead from COVID while only 1.4% of the females are dead from COVID in Korea.
   
 ## Inferential results 
-
-
-
-
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+  
+Looking at the test above, the counts when compared to the counts expected by the null hypothesis are vastly different. Our data displayed that 44 males died as opposed to 25 females even though there is a greater sample of females. This indicates a correlation in the data between death and sex, disproving the null hypothesis. As was shown in the Fisher exact test, the odds ratio of death for male to females is 2.3:1. This means that if you are a male you are 2.3 times more likely to die than a female. This is very different form the expected null ratio of 1:1. Taking into account the 95% confidence interval, the test suggests that the ratio can range from 1.4:1 to 3.9:1. Finally, the calculated p-value is very small, which illustrates that we can reject the null hypothesis and assert that sex has a significant effect on death from COVID in Korea.
+  
 ## Conclusions
 
